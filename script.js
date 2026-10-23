@@ -126,12 +126,13 @@ if (yearEl) yearEl.textContent = new Date().getFullYear();
 
 // ===== Highlight the nav link of the section on screen =====
 const navAnchors = document.querySelectorAll(".nav__pill a");
-const sectionIds = ["home", "services", "about", "contact"];
+const sectionIds = ["home", "services", "projects", "about", "contact"];
 window.addEventListener("scroll", () => {
   let current = "home";
   sectionIds.forEach((id) => {
     const el = document.getElementById(id);
     if (el && el.getBoundingClientRect().top < 140) current = id;
   });
-  navAnchors.forEach((a) => a.classList.toggle("active", a.getAttribute("href") === "#" + current));
+  // only on the main page (sub-pages keep "Projects" highlighted)
+  if (document.getElementById("home")) navAnchors.forEach((a) => a.classList.toggle("active", a.getAttribute("href") === "#" + current));
 });
