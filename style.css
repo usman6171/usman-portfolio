@@ -200,7 +200,7 @@ html, body { overflow-x: clip; }
 
 /* ================= FAQ ================= */
 .faq-list { display: grid; gap: 14px; }
-.faq { border-radius: 8px; background: rgba(18, 18, 18, 0.85); border: 1px solid var(--border); transition: border-color 0.3s, background 0.3s; }
+.faq { border-radius: 0; background: rgba(18, 18, 18, 0.85); border: 1px solid var(--border); transition: border-color 0.3s, background 0.3s; }
 .faq:hover, .faq.open { border-color: rgba(242, 106, 61, 0.6); background: var(--surface-2); }
 .faq__q { width: 100%; display: flex; align-items: center; gap: 14px; padding: 16px 20px; background: none; border: 0; cursor: pointer; text-align: left; }
 .faq__num { font-family: var(--font-head); font-weight: 300; font-size: 1.5rem; transition: color 0.3s; }
